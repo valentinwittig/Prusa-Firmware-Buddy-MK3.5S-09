@@ -1569,8 +1569,8 @@
         #define X_MICROSTEPS 8 // 0..256
         #define X_400_STEP_CURRENT 550
         #define X_400_STEP_MICROSTEPS 8
-        #define X_200_STEP_CURRENT 300
-        #define X_200_STEP_MICROSTEPS 16
+        #define X_200_STEP_CURRENT 550
+        #define X_200_STEP_MICROSTEPS 8
         #define X_RSENSE 0.22
         #define X_CHAIN_POS 0
     #endif
@@ -1586,8 +1586,8 @@
         #define Y_MICROSTEPS 8
         #define Y_400_STEP_CURRENT 700
         #define Y_400_STEP_MICROSTEPS 8
-        #define Y_200_STEP_CURRENT 370
-        #define Y_200_STEP_MICROSTEPS 16
+        #define Y_200_STEP_CURRENT 700
+        #define Y_200_STEP_MICROSTEPS 8
         #define Y_RSENSE 0.22
         #define Y_CHAIN_POS 0
     #endif
