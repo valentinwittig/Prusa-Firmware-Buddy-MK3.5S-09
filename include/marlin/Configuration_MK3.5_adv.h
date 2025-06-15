@@ -1822,16 +1822,18 @@
     #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
         // The range of stallguard sensitivities to probe and calibrate
         // (the required sensitivity varies by motor)
-        #define XY_STALL_SENSITIVITY_MIN -7
-        #define XY_STALL_SENSITIVITY_MAX -2
+        #define XY_STALL_SENSITIVITY_MIN 0
+        #define XY_STALL_SENSITIVITY_MAX 0
+
+        // Read from config. May be int16 max if uncalibrated, which is
+        // then handled in the Crash_s class. 
+        // Stall_min and max are 0, the autocalibration is useless, I leave it in for the sake of completeness
+        #define X_STALL_SENSITIVITY config_store().homing_sens_x.get() 
 
         // Read from config. May be int16 max if uncalibrated, which is
         // then handled in the Crash_s class.
-        #define X_STALL_SENSITIVITY 0
-
-        // Read from config. May be int16 max if uncalibrated, which is
-        // then handled in the Crash_s class.
-        #define Y_STALL_SENSITIVITY 0
+        // Stall_min and max are 0, the autocalibration is useless, I leave it in for the sake of completeness
+        #define Y_STALL_SENSITIVITY config_store().homing_sens_y.get() 
 
         #define Z_STALL_SENSITIVITY 4
 
